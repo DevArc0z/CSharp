@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FitLifeDebugging
+{
+    public class Member
+    {
+        public Member(string name, double height, double weight)
+        {
+            Name = name;
+            Height = height;
+            Weight = weight;
+        }
+
+        public Member()
+        {
+        }
+
+        public string Name { get; set; }
+        public double Height { get; set; }
+        public double Weight { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime ValidUntil { get; set; }
+
+        private bool IsActive()
+        {
+            if (StartDate < DateTime.Today)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public void ActivateMembership(DateTime startDate)
+        {
+            if (IsActive())
+            {
+                throw new Exception($"Het lidmaatschap van lid {Name} kan niet geactiveerd worden omdat het is al actief is!");
+            }
+
+            StartDate = startDate;
+            ValidUntil = startDate.AddYears(1);
+        }
+
+        public void RenewMembership(int years)
+        {
+            if (!IsActive())
+            {
+                throw new Exception($"Het lidmaatschap van lid {Name} kan niet verlengd worden omdat dit niet actief is!");
+            }
+            ValidUntil = ValidUntil.AddYears(2);
+        }
+
+        public void DeactivateMembership(DateTime endDate)
+        {
+            if (IsActive())
+            {
+                throw new Exception($"Het lidmaatschap van lid {Name} kan niet gestopt worden omdat het niet actief is!");
+            }
+
+            ValidUntil = endDate;
+        }
+    }
+}
