@@ -20,9 +20,22 @@
                 getal++;
             }
             //print de priemgetallen naar de console
-            foreach (int priemgetal in priemgetallen)
+            /* foreach (int priemgetal in priemgetallen)
+             {
+                 Console.Write($"{priemgetal} ");
+                 if ((Array.IndexOf(priemgetallen, priemgetal) + 1) % 10 == 0)
+                 {
+                     Console.WriteLine();
+                 }
+             }*/
+
+            for (int i = 0; i < priemgetallen.Length; i++)
             {
-                Console.WriteLine(priemgetal);
+                Console.Write($"{priemgetallen[i]} ".PadLeft(4));
+                if ((i + 1) % 10 == 0)
+                {
+                    Console.WriteLine();
+                }
             }
         }
         private static bool IsPriem(int number)
