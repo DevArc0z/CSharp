@@ -47,6 +47,16 @@ namespace Login
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
+            //Controleer of de gebruiker een nieuwe admin is
+
+            if (IsAdminCheckBox.IsChecked == true)
+            {
+                MessageBox.Show("Olah, soy Dora. Are you the new admin?");
+            }
+
+
+
+
             string inputUsername = InputUsernameTextBox.Text;
             string inputPassword = InputWachtwoordBox.Password;
 

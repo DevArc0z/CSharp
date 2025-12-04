@@ -56,5 +56,12 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="top"
                 Margin="0 10 20 0" Click="RegisterButton_Click"/>
+        <CheckBox
+            Name="IsAdminCheckBox"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="20 160 0 0"
+            Content="Is Admin"
+            IsChecked="False"/>
     </Grid>
 </Window>
