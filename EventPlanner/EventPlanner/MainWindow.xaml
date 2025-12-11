@@ -1,0 +1,28 @@
+﻿<Window x:Class="EventPlanner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventPlanner"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid>
+        <Menu Height="20" VerticalAlignment="Top">
+            <MenuItem Header="Event">
+                <MenuItem Header="Verwijder alle events" Click="DeletaAllEvents_Click"/>
+                <MenuItem Header="Maak standaard event" Click="CreateDefaultEvent_Click"/>
+            </MenuItem>
+            <MenuItem Header="Afsluiten" Click="Afsluiten"/>
+        </Menu>
+        <Label Content="Type event" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20"/>
+        <ComboBox Name="EventTypeComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,50,0,0" Width="200"/>
+        <Label Content="Naam event" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,90,0,0"/>
+        <TextBox Name="EventNameTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,130,0,0" Width="200"/>
+        <Label Content="Aantal bezoekers" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,170,0,0"/>
+        <TextBox Name="AmountOfPeopleTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,210,0,0" Width="200"/>
+        <Button Content="Voeg event toe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,250,0,0" Width="200" Click="AddEventButton_Click"/>
+        <Button Content="Verwijder event" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,290,0,0" Width="200" Click="RemoveEventButton_Click"/>
+        <ListBox Name="EventListBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,20,0,0" Width="500" Height="350"/>
+    </Grid>
+</Window>
