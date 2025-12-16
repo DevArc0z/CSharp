@@ -1,0 +1,54 @@
+﻿<Window x:Class="LaboWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <Label Content="Registratie nieuwe student" Background="LightBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="4" Margin="2"
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+               FontSize="60"/>
+
+        <StackPanel Background="LightCoral" Margin="2"
+               Grid.Row="1" Grid.Column="0">
+            <Label Content="Voornaam" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5"/>
+            <TextBox Margin="5 0 10 10"
+                     Name="firstNameTextBox"/>
+            <Label Content="Achternaam" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5"/>
+            <TextBox Margin="5 0 10 10"
+                     Name="lastNameTextBox"/>
+            <Label Content="E-mail" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5"/>
+            <TextBox Margin="5 0 10 10"
+                     Name="emailTextBox"/>
+        </StackPanel>
+
+        <Label Content="Rij 2, Column 2" Background="LightGoldenrodYellow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="0" Margin="2"
+               Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"/>
+
+        <WrapPanel Background="LightGreen"  Margin="2"
+               Grid.Row="2" Grid.Column="0">
+            <Button Width="150" FontSize="16" Margin="10" Content="Annuleren" Name="cancelButton"/>
+            <Button Width="150" FontSize="16" Margin="10" Content="Opslaan" Name="saveButton"/>
+            <Button Width="150" FontSize="16" Margin="10"  Content="Wissen" Name="clearButton"/>
+        </WrapPanel>
+
+        <Label Content="Footer" Background="LightGray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="10" BorderBrush="Black" BorderThickness="0" Margin="2"
+               Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
